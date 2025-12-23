@@ -1,0 +1,124 @@
+/* contact.css */
+
+/* The Layout Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Form takes 2 parts, Info takes 1 part */
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+/* 1. The Contact Form Card */
+.contact-form-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    border-top: 5px solid var(--primary-mid);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--primary-dark);
+}
+
+.contact-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: 'Tajawal', sans-serif;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-input:focus {
+    border-color: var(--primary-mid);
+    box-shadow: 0 0 0 3px var(--accent);
+}
+
+textarea.contact-input {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.btn-send {
+    background: linear-gradient(90deg, var(--primary-dark), var(--primary-mid));
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-send:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* 2. The Info Card */
+.contact-info-card {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-mid));
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    height: fit-content;
+}
+
+.info-item {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.info-icon {
+    font-size: 1.5rem;
+    background: rgba(255,255,255,0.2);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.info-text h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    color: var(--accent);
+}
+
+.info-text p {
+    margin: 0;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* Success Message */
+.success-msg {
+    background: #d1fae5;
+    color: #065f46;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #a7f3d0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr; /* Stack on mobile */
+    }
+}

@@ -1,0 +1,55 @@
+/* news.css */
+.news-container { max-width: 900px; margin: 50px auto; padding: 0 20px; }
+
+.news-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.03);
+    position: relative;
+}
+.news-card:hover { transform: translateY(-5px); }
+.news-card::before {
+    content: ''; position: absolute; right: 0; top: 0; bottom: 0;
+    width: 6px; background: linear-gradient(to bottom, var(--primary-dark), var(--primary-mid));
+}
+
+.news-content { padding: 30px 40px 30px 30px; }
+.news-title { color: var(--primary-dark); font-size: 1.4rem; font-weight: 800; margin-bottom: 10px; }
+.news-date {
+    display: inline-block; background-color: var(--accent); color: var(--primary-dark);
+    padding: 5px 15px; border-radius: 50px; font-size: 0.85rem; font-weight: bold; margin-bottom: 15px;
+}
+.news-body { color: #555; line-height: 1.8; font-size: 1.05rem; }
+.read-more { display: inline-block; margin-top: 15px; color: var(--primary-mid); font-weight: bold; text-decoration: none; }
+
+/* Single News & Comments */
+.single-news-header { margin-bottom: 30px; border-bottom: 2px solid var(--accent); padding-bottom: 20px; }
+.single-news-title { color: var(--primary-dark); font-size: 2rem; font-weight: 900; }
+
+.comments-section { margin-top: 50px; border-top: 1px solid #eee; padding-top: 30px; }
+.comment-box {
+    background: #fdfdfd; border: 1px solid #eee; padding: 20px;
+    border-radius: 15px; margin-bottom: 15px; display: flex; gap: 15px;
+}
+.comment-avatar {
+    width: 40px; height: 40px; background: var(--primary-light); color: white;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;
+}
+.comment-form textarea {
+    width: 100%; padding: 15px; border: 2px solid #eee; border-radius: 10px; outline: none;
+}
+
+.btn-delete-news button{
+    background: #fee2e2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: 0.2s;
+}

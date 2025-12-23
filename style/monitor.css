@@ -1,0 +1,48 @@
+/* monitor.css */
+.table-container {
+    max-width: 1000px;
+    margin: 0 auto 50px auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+table { width: 100%; border-collapse: collapse; }
+
+thead {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-mid));
+    color: white;
+}
+
+th, td { padding: 20px; text-align: right; }
+th { font-weight: 700; font-size: 1.1rem; }
+td { border-bottom: 1px solid #f0f9ff; color: #555; font-weight: 500; }
+
+tbody tr { transition: background 0.3s; }
+tbody tr:hover { background-color: var(--accent); }
+
+/* Status Badges */
+.status-badge {
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: inline-block;
+}
+.status-Docked { background-color: #86ffc1; color: #065f46; }
+.status-Passing { background-color: #d1fae5; color: #065f46; }
+.status-Waiting { background-color: #ffedd5; color: #9a3412; }
+.status-Scheduled { background-color: #dbeafe; color: #1e40af; }
+
+.btn-delete-ship {
+    background: #fee2e2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: 0.2s;
+}

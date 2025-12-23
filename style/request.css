@@ -1,0 +1,31 @@
+
+/* --- Add to style.css for Request Page --- */
+
+/* Request Status Colors */
+.req-status {
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.req-Pending {
+    background-color: #fef3c7; /* Light Yellow */
+    color: #d97706; /* Dark Orange */
+}
+
+.req-Accepted {
+    background-color: #d1fae5; /* Light Green */
+    color: #059669; /* Dark Green */
+}
+
+.req-Rejected {
+    background-color: #fee2e2; /* Light Red */
+    color: #dc2626; /* Dark Red */
+}
+
+/* Simple history table tweaks */
+.history-table th {
+    background: var(--primary-mid); /* Slightly lighter header for this table */
+    font-size: 0.95rem;
+}

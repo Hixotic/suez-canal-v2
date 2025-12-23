@@ -1,0 +1,762 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;800&display=swap');
+
+:root {
+    /* --- The "First Design" Water Palette --- */
+    
+    /* Dark Blue (Footer, Headings, Strong Text) */
+    --primary-dark: #006994;   
+    
+    /* Ocean Blue (Buttons, Gradients, Icons) */
+    --primary-mid: #0096c7;    
+    
+    /* Light Blue (Highlights, Borders) */
+    --primary-light: #48cae4;  
+    
+    /* Very Light Foam (Backgrounds, Hovers) */
+    --accent: #caf0f8;         
+    
+    /* Text Colors */
+    --text-dark: #1d3557;
+    --text-light: #f1faee;
+    
+    /* Basics */
+    --white: #ffffff;
+    --shadow: 0 10px 30px -10px rgba(0, 119, 182, 0.3);
+}
+
+/* Update Body to use the correct variable */
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: #f0f9ff; /* Very faint blue background */
+    color: var(--text-dark);
+    direction: rtl;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            backdrop-filter: blur(10px);
+}
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--primary-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary-mid);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 700;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -5px;
+            right: 0;
+            background: var(--primary-mid);
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+
+        nav a:hover {
+            color: var(--primary-mid);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--white) 0%, var(--foam) 100%);
+    padding: 80px 20px;
+    text-align: center;
+    border-bottom: 5px solid var(--light-blue);
+}
+
+.hero h1 {
+    color: var(--deep-blue);
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.cta-button {
+    background: var(--ocean-blue);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 150, 199, 0.4);
+    transition: transform 0.2s;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    background: var(--deep-blue);
+}
+
+/* Stats Section */
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: -40px; /* Overlap effect */
+    padding-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--light-blue);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--deep-blue);
+    display: block;
+}
+
+.stat-label {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* Features/Services */
+.features {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #e1e1e1;
+    transition: 0.3s;
+}
+
+.feature-box:hover {
+    border-color: var(--ocean-blue);
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    background: var(--deep-blue);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+/* --- Add to style.css --- */
+
+/* Page Title with Gradient */
+.page-title {
+    text-align: center;
+    margin-top: 120px; /* Space for fixed header */
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    background: linear-gradient(to left, var(--primary-dark), var(--primary-mid));
+    font-weight: 900;
+    color:black;
+}
+
+/* Modern Table Container */
+.table-container {
+    max-width: 1000px;
+    margin: 0 auto 50px auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 119, 182, 0.15);
+    overflow: hidden; /* Keeps corners rounded */
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-mid));
+    color: white;
+}
+
+th {
+    padding: 20px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-align: right;
+    color:black;
+}
+
+td {
+    padding: 20px;
+    border-bottom: 1px solid #f0f9ff;
+    color: #555;
+    font-weight: 500;
+}
+
+/* Row Hover Effect - Water Feel */
+tbody tr {
+    transition: background 0.3s;
+}
+
+tbody tr:hover {
+    background-color: var(--accent); /* Light foam color */
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.status-Passing {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.status-Waiting {
+    background-color: #ffedd5;
+    color: #9a3412;
+}
+
+.status-Scheduled {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    .table-container {
+        margin: 20px;
+        overflow-x: auto;
+    }
+}
+
+/* --- Add to style.css --- */
+
+/* Weather Cards Grid */
+.weather-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+/* Individual Weather Card (Glass/Modern Look) */
+.weather-card {
+    background: white;
+    width: 300px;
+    padding: 40px 30px;
+    border-radius: 30px; /* Super rounded */
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 105, 148, 0.15);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.weather-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 105, 148, 0.25);
+}
+
+/* Decorative gradient circle behind the icon */
+.weather-card::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, var(--accent), transparent);
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.city-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-dark); /* Deep Sea */
+    margin-bottom: 10px;
+}
+
+.weather-icon {
+    font-size: 4rem;
+    margin: 15px 0;
+    display: block;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
+}
+
+.temp-display {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--primary-mid); /* Ocean Blue */
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.weather-details p {
+    color: #666;
+    margin: 8px 0;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Navigation Notice Box */
+.nav-notice {
+    max-width: 800px;
+    margin: 0 auto 80px auto;
+    background: linear-gradient(to left, #e0f7fa, #fff);
+    border-right: 5px solid var(--primary-mid);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* --- Add to style.css for News Page --- */
+
+/* News Container */
+.news-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* The News Card */
+.news-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+    overflow: hidden; /* Keeps content inside rounded corners */
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.03);
+    position: relative;
+}
+
+.news-card:hover {
+    transform: translateY(-5px); /* Float effect */
+    box-shadow: 0 15px 30px rgba(0, 105, 148, 0.2);
+}
+
+/* Decorative blue line on the right */
+.news-card::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: linear-gradient(to bottom, var(--primary-dark), var(--primary-mid));
+}
+
+.news-content {
+    padding: 30px 40px 30px 30px; /* Extra padding on right for the blue line */
+}
+
+/* Title */
+.news-title {
+    color: var(--primary-dark);
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+/* Date Badge */
+.news-date {
+    display: inline-block;
+    background-color: var(--accent); /* Foam color */
+    color: var(--primary-dark);
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Text Body */
+.news-body {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* "Read More" or Action Link (Optional) */
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--primary-mid);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+
+/* --- Add to style.css for View News Page --- */
+
+/* Single News Header */
+.single-news-header {
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 20px;
+}
+
+.single-news-title {
+    color: var(--primary-dark);
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.single-news-meta {
+    color: #888;
+    font-size: 0.9rem;
+    display: flex;
+    gap: 15px;
+}
+
+/* Comments Section */
+.comments-section {
+    margin-top: 50px;
+    border-top: 1px solid #eee;
+    padding-top: 30px;
+}
+
+.comment-box {
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.comment-avatar {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-light);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.comment-content h4 {
+    margin: 0 0 5px 0;
+    color: var(--primary-dark);
+    font-size: 1rem;
+}
+
+.comment-content p {
+    margin: 0;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.comment-date {
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Comment Form */
+.comment-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    resize: vertical;
+    font-family: 'Tajawal', sans-serif;
+    transition: 0.3s;
+    outline: none;
+}
+
+.comment-form textarea:focus {
+    border-color: var(--primary-mid);
+}
+
+.login-alert {
+    background: var(--accent);
+    color: var(--primary-dark);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* --- Add to style.css for Login Page --- */
+
+/* Center the login box vertically and horizontally */
+.login-wrapper {
+    min-height: 80vh; /* Takes up most of the screen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-card {
+    background: white;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 105, 148, 0.2);
+    text-align: center;
+    border-top: 5px solid var(--primary-mid);
+}
+
+.login-title {
+    color: var(--primary-dark);
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+/* Form Inputs */
+.form-group {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #666;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e1e1;
+    border-radius: 10px;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1rem;
+    transition: 0.3s;
+    outline: none;
+}
+
+.form-control:focus {
+    border-color: var(--primary-mid);
+    box-shadow: 0 0 0 3px var(--accent);
+}
+
+/* Submit Button */
+.btn-login {
+    width: 100%;
+    background: linear-gradient(90deg, var(--primary-dark), var(--primary-mid));
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.2s;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 105, 148, 0.3);
+}
+
+.error-msg {
+    background: #fee2e2;
+    color: #b91c1c;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+
+/*dashboard*/
+/* --- Add to style.css for Admin Dashboard --- */
+
+/* Dashboard Layout */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Action Buttons */
+.btn-action {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Tajawal', sans-serif;
+    transition: 0.2s;
+    margin-left: 5px;
+}
+
+.btn-accept {
+    background: #10b981; /* Green */
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+}
+
+.btn-reject {
+    background: #ef4444; /* Red */
+    box-shadow: 0 4px 10px rgba(239, 68, 68, 0.3);
+}
+
+.btn-accept:hover, .btn-reject:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Dashboard Section Titles */
+.dash-title {
+    color: var(--primary-dark);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-right: 5px solid var(--primary-mid);
+    padding-right: 15px;
+}
+
+/* Responsive fix */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Add to style.css for Request Page --- */
+
+/* Request Status Colors */
+.req-status {
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.req-Pending {
+    background-color: #fef3c7; /* Light Yellow */
+    color: #d97706; /* Dark Orange */
+}
+
+.req-Accepted {
+    background-color: #d1fae5; /* Light Green */
+    color: #059669; /* Dark Green */
+}
+
+.req-Rejected {
+    background-color: #fee2e2; /* Light Red */
+    color: #dc2626; /* Dark Red */
+}
+
+/* Simple history table tweaks */
+.history-table th {
+    background: var(--primary-mid); /* Slightly lighter header for this table */
+    font-size: 0.95rem;
+}
+
+/* Footer Styling */
+footer {
+    background: var(--primary-dark); /* Deep Sea Blue */
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: auto; /* Pushes footer to bottom */
+    position: relative;
+    z-index: 10;
+}
+
+footer a {
+    color: var(--accent);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
